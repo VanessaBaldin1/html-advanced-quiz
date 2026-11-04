@@ -1,0 +1,170 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Teste seus conhecimentos sobre HTML avançado neste desafio para desenvolvedores.">
+  <meta name="theme-color" content="#101522">
+  <title>HTML Advanced Quiz | Developer Challenge</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/script.js" defer></script>
+</head>
+
+<body>
+  <header class="topbar">
+    <a href="#" class="brand" aria-label="HTML Advanced Quiz - início">
+      <span class="brand-icon">&lt;/&gt;</span>
+      <span>HTML <strong>ADVANCED</strong></span>
+    </a>
+    <span class="level-badge">DEVELOPER CHALLENGE</span>
+  </header>
+
+  <main class="container">
+
+    <section id="welcome-screen" class="welcome-screen">
+      <div class="hero-icon" aria-hidden="true">&lt;/&gt;</div>
+      <span class="eyebrow">TESTE SEUS CONHECIMENTOS</span>
+      <h1>Você domina o <span>HTML avançado?</span></h1>
+      <p class="hero-description">
+        Um desafio para desenvolvedores que querem ir além do básico.
+        Teste seus conhecimentos sobre semântica, acessibilidade,
+        performance e recursos avançados do HTML5.
+      </p>
+
+      <div class="challenge-info">
+        <article class="info-card">
+          <span class="info-icon">◷</span>
+          <strong>10</strong>
+          <small>Questões</small>
+        </article>
+        <article class="info-card">
+          <span class="info-icon">◎</span>
+          <strong>Avançado</strong>
+          <small>Dificuldade</small>
+        </article>
+        <article class="info-card">
+          <span class="info-icon">★</span>
+          <strong>100</strong>
+          <small>Pontos possíveis</small>
+        </article>
+      </div>
+
+      <button id="start-btn" class="primary-btn">
+        Começar desafio <span>→</span>
+      </button>
+      <p class="helper-text">Sem cadastro. No seu ritmo. Aprenda enquanto joga.</p>
+    </section>
+
+    <section id="quiz-screen" class="quiz-screen hidden"
+      aria-labelledby="question-title">
+
+      <div class="quiz-header">
+        <div>
+          <span class="eyebrow">HTML KNOWLEDGE TEST</span>
+          <p id="question-counter">QUESTÃO 01 DE 10</p>
+        </div>
+        <div class="score-display">
+          <span>★</span>
+          <span id="score">0 pontos</span>
+        </div>
+      </div>
+
+      <div class="progress-track"
+        role="progressbar"
+        aria-label="Progresso do quiz"
+        aria-valuemin="0"
+        aria-valuemax="10"
+        aria-valuenow="0"
+        id="progress-container">
+        <div id="progress-bar" class="progress-bar"></div>
+      </div>
+
+      <article class="question-card">
+        <div class="question-meta">
+          <span class="question-tag">HTML5 AVANÇADO</span>
+          <span id="question-type" class="question-type">ESCOLHA ÚNICA</span>
+        </div>
+
+        <h2 id="question-title"></h2>
+        <p id="question-description" class="question-description">
+          Selecione a alternativa correta.
+        </p>
+
+        <div id="options-container" class="options-container"
+          role="group" aria-label="Alternativas da questão">
+        </div>
+
+        <div id="feedback" class="feedback hidden"
+          role="status" aria-live="polite">
+        </div>
+
+        <div class="question-actions">
+          <button id="confirm-btn" class="primary-btn" disabled>
+            Confirmar resposta →
+          </button>
+          <button id="next-btn" class="primary-btn hidden">
+            Próxima questão →
+          </button>
+        </div>
+      </article>
+
+      <p class="footer-note">
+        Pense como um desenvolvedor. Escolha com atenção.
+      </p>
+    </section>
+
+    <section id="result-screen" class="result-screen hidden"
+      aria-labelledby="result-title">
+
+      <div class="result-icon">🏆</div>
+      <span class="eyebrow">DESAFIO FINALIZADO</span>
+      <h1 id="result-title">Muito bem!</h1>
+      <p id="result-message">Confira seu desempenho.</p>
+
+      <div class="result-card">
+        <span class="result-label">SUA PONTUAÇÃO</span>
+        <strong id="final-score">0</strong>
+        <span class="result-total">de 100 pontos</span>
+
+        <div class="result-divider"></div>
+
+        <div class="result-stats">
+          <div>
+            <strong id="correct-count">0</strong>
+            <small>Acertos</small>
+          </div>
+          <div>
+            <strong id="wrong-count">0</strong>
+            <small>Erros</small>
+          </div>
+          <div>
+            <strong id="percentage">0%</strong>
+            <small>Aproveitamento</small>
+          </div>
+        </div>
+      </div>
+
+      <div class="result-actions">
+        <button id="restart-btn" class="primary-btn">
+          Jogar novamente ↻
+        </button>
+        <a class="secondary-btn"
+          href="https://developer.mozilla.org/pt-BR/docs/Web/HTML"
+          target="_blank" rel="noopener noreferrer">
+          Estudar HTML na MDN ↗
+        </a>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <p>Desenvolvido para quem ama construir na web.</p>
+    <span>HTML5 · CSS3 · JavaScript</span>
+  </footer>
+</body>
+</html>
